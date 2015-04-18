@@ -1,0 +1,11 @@
+@(message: String)
+
+@main(message) {
+<h2>User Registration</h2>
+<form action="@routes.Application.addUser()" method="post">
+    Username: <input type="text" name="username" /><br><br>
+    Password: <input type="text" name="password" /><br><br>
+    Confirm Password: <input type="text" name="confirm" /><br><br>
+    <button>Register</button>
+</form>
+}

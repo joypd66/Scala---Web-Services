@@ -1,0 +1,9 @@
+@(message: String)
+
+@main(message) {
+<h2>Lookup Stock Price</h2>
+<form action= "@routes.Application.lookup()" method="post">
+    Stock Ticker: <input type="text" name="stockTicker" /><br><br>
+    <button> Submit </button>
+</form>
+}

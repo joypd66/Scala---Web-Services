@@ -1,0 +1,15 @@
+@(title: String)(content: Html)
+
+<html>
+    <head>
+        <title>@title</title>
+    </head>
+    <body bgcolor="Silver">
+        <a href="@routes.Application.getProfile()"> Profile</a> |
+        <a href="@routes.Application.getRegister()">Register</a> |
+        <a href="@routes.Application.getLogin()">Login</a> |
+        <a href="@routes.Application.getLogout()">Logout</a>
+        <hr>
+        @content
+    </body>
+</html>

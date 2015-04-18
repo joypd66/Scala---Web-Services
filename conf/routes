@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Views
+GET     /register                   controllers.Application.getRegister()
+GET     /login                      controllers.Application.getLogin()
+GET     /profile                    controllers.Application.getProfile()
+GET     /logout                     controllers.Application.getLogout()
+
+POST    /register                   controllers.Application.addUser()
+POST    /login                      controllers.Application.login()
+POST    /logout                     controllers.Application.logout()
+POST    /lookup                     controllers.Application.lookup()
+
+# To Json
+GET     /users                      controllers.Application.getUsers()
+GET     /lookups/:username/:password     controllers.Application.getLookups(username: String, password: String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
